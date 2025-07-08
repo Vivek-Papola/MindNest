@@ -2,7 +2,7 @@
 
 A full-stack mental health companion built with the MERN stack. Journal privately, track your mood, chat with an AI therapist, take self‑assessment quizzes, and share anonymously—all in one supportive space.
 
-Live Demo: https://mindfulness-mental-health.netlify.app/
+Live Demo: https://mindnest-frontendd.onrender.com
 
 ---
 
