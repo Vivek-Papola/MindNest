@@ -11,7 +11,7 @@ const JournalDetail = () => {
     useEffect(() => {
         const fetchJournal = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/${username}/${id}`);
+                const response = await axios.get(`https://mindnest-backend-591h.onrender.com/${username}/${id}`);
                 setJournal(response.data);
             } catch (error) {
                 setError('Error fetching journal details');
