@@ -1,41 +1,53 @@
-<<<<<<< HEAD
-# MentalHealthApp  
+# MindNest 🧠💚
 
-## https://mindfulness-mental-health.netlify.app/
+A full-stack mental health companion built with the MERN stack. Journal privately, track your mood, chat with an AI therapist, take self‑assessment quizzes, and share anonymously—all in one supportive space.
 
-MentalHealthApp is a comprehensive mental health application built using the MERN stack. It offers several features to help users manage their mental well-being, including cookie session login, a mood tracker, an AI therapist, a mood quiz, and anonymous sharing.
+Live Demo: https://mindfulness-mental-health.netlify.app/
+
+---
 
 ## Features
 
-### Cookie Session Login
-- Secure user authentication using cookie sessions to maintain user login states across different sessions. So also with an unauthorised acces you can't access certain pages of the application. 
+- **🔒 Cookie‑Session Login**  
+  Secure authentication with HTTP‑only cookies. Unauthorized users cannot access protected routes.
 
-### Mood Tracker
-- Tracks your daily mood and logs it in the database, allowing users to monitor their mental health over time.
+- **📔 Personal Journals (CRUD)**  
+  Create, read, update & delete your private journal entries. Reflect on your thoughts over time.
 
-### AI Therapist
-- Chat with an AI therapist to discuss your feelings and get instant responses. This feature uses the Gemini API for natural language processing to provide helpful advice and support.
+- **📊 Mood Tracker**  
+  Log daily moods on an interactive calendar. Visualize trends to spot patterns in your well‑being.
 
-### Mood Quiz
-- Take a quiz to understand your current mood better. The responses are analyzed using the Gemini API, and a personalized feedback report is generated based on your answers.
+- **🤖 AI Therapist**  
+  Chat with an AI‑powered therapist (Gemini API) for empathetic support and coping suggestions.
 
-### Anonymous Sharing
-- Share your thoughts and feelings anonymously with the community. This feature ensures that users can express themselves freely without revealing their identity.
+- **❓ Mood Quiz**  
+  A 15‑question quiz analyzes your current state. Gemini‑driven feedback generates personalized advice.
 
-### CRUD Functionality
-- Full CRUD (Create, Read, Update, Delete) operations for user management and article management, allowing users to manage their profiles and content seamlessly.
+- **🕵️ Anonymous Sharing**  
+  Share your feelings anonymously with the community. Connect without revealing your identity.
 
-## Technologies Used
+- **⚙️ Full Stack CRUD**  
+  End‑to‑end create, read, update, delete functionality for users, journals & anonymous posts.
 
-- **MongoDB:** Database to store user data, mood logs, and shared posts.
-- **Express.js:** Backend framework to handle API requests and server-side logic.
-- **React:** Frontend library to build a responsive and interactive user interface.
-- **Node.js:** Runtime environment to execute JavaScript on the server.
-- **HTML, CSS, JavaScript:** Core web technologies for building the frontend.
-- **RapidAPI:** Platform used to integrate the Gemini API for AI therapist and quiz responses.
-- **Gemini API:** Used for natural language processing to power the AI therapist and generate quiz feedback.
+---
 
-=======
-# MindNest
-MindNest is your safe digital space to pause, breathe, and heal. 🌿 Let’s journey together toward mental well-being 💚.
->>>>>>> 9ded29b04498720bda9fa8bb926cd95c9f573b08
+## Tech Stack
+
+- **Frontend**  
+  React, Tailwind CSS, React Router v6, React‑Loader‑Spinner  
+- **Backend**  
+  Node.js, Express.js, MongoDB, Mongoose, Passport.js, express‑session  
+- **AI & APIs**  
+  Gemini API (via RapidAPI) for chat & quiz analysis  
+- **Hosting**  
+  Netlify (frontend), Heroku / Render / VPS (backend)  
+
+---
+
+## Installation
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/your-username/MindNest.git
+cd MindNest
