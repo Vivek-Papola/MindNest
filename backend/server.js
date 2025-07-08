@@ -14,46 +14,49 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import bodyParser from 'body-parser';
 
-
 mongoose.set('strictQuery', true);
 
 const app = express();
 const server = http.createServer(app); // Create HTTP server
 
+// Get __dirname in ES Module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-app.use(express.json());
+// CORS configuration to allow only your frontend domain
 app.use(cors({
-  origin: '*',
+  origin: 'https://mindnest-backend-591h.onrender.com', // ✅ your frontend domain here
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT'],
   credentials: true,
-
 }));
+
+app.use(express.json());
+app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use (bodyParser.json ({extended: true}));
-app.use (bodyParser.urlencoded({extended: true}));
 
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || 'mindnestsecret',
   resave: false,
   saveUninitialized: true,
 }));
 
 app.use(passport.initialize());
 app.use(passport.session());
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/upload1', express.static(path.join(__dirname, 'upload1')));
 
+// Connect to MongoDB
 console.log('→ Using Mongo URI:', process.env.MONGODB_URI);
-
 Connection();
+
+// Routes
 app.use('/', userRoutes);
 
+// Server Port
 const port = process.env.PORT || 4000;
-
 server.listen(port, () => {
-  console.log("Server is running on port", port);
+  console.log("🚀 Server is running on port", port);
 });
 
