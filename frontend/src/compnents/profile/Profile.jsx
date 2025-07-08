@@ -14,7 +14,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/${username}/getuserdetails`);
+        const response = await axios.get(`https://mindnest-backend-591h.onrender.com/${username}/getuserdetails`);
         setUserDetails(response.data);
       } catch (error) {
         console.error('Error fetching user details:', error);
