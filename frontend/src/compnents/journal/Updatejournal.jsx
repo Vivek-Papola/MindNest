@@ -211,7 +211,7 @@ const UpdateJournal = () => {
     useEffect(() => {
         const fetchJournal = async () => {
             try {
-                const response = await axios.get(`https://mindnest-backend-591h.onrender.com/${username}/${id}`);
+                const response = await axios.get(`http://localhost:8000/journals/${username}/${id}`);
                 if (response.status === 200) {
                     const { title, article, tags, coverPicture } = response.data;
                     setTitle(title);
