@@ -355,7 +355,7 @@ export default function Signup() {
                 formDataWithFile.append('profilePicture', profilePicture);
             }
 
-            const response = await fetch('http://localhost:8000/signup', {
+            const response = await fetch('https://mindnest-backend-591h.onrender.com', {
                 method: 'POST',
                 body: formDataWithFile,
             });
