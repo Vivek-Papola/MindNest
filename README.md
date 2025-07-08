@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MentalHealthApp  
 
 ## https://mindfulness-mental-health.netlify.app/
@@ -34,3 +35,7 @@ MentalHealthApp is a comprehensive mental health application built using the MER
 - **RapidAPI:** Platform used to integrate the Gemini API for AI therapist and quiz responses.
 - **Gemini API:** Used for natural language processing to power the AI therapist and generate quiz feedback.
 
+=======
+# MindNest
+MindNest is your safe digital space to pause, breathe, and heal. 🌿 Let’s journey together toward mental well-being 💚.
+>>>>>>> 9ded29b04498720bda9fa8bb926cd95c9f573b08
