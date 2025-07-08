@@ -269,7 +269,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://mindnest-backend-591h.onrender.com/login', { username, password });
+      const response = await axios.post('https://mindnest-backend-591h.onrender.com/login', { username, password }, { withCredentials: true });
       console.log(response);
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('tokenUser', response.data.user.username);
