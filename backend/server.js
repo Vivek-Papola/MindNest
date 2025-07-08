@@ -39,6 +39,10 @@ app.use(session({
   secret: process.env.SESSION_SECRET || 'mindnestsecret',
   resave: false,
   saveUninitialized: true,
+  cookie: {
+    sameSite: 'none', // ← Important for cross-origin cookies
+    secure: true       // ← Required for Render (HTTPS)
+  }
 }));
 
 app.use(passport.initialize());
