@@ -18,7 +18,7 @@ const MoodTrack = () => {
 
   useEffect(() => {
     // Fetch existing mood data for the user
-    axios.get(`http://localhost:8000/api/moods/${username}`)
+    axios.get(`https://mindnest-backend-591h.onrender.com/api/moods/${username}`)
       .then(response => setMoodData(response.data))
       .catch(error => console.error('Error fetching mood data:', error));
   }, [username]);
