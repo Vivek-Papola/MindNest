@@ -36,7 +36,7 @@ const Navbar = () => {
 
   const confirmDelete = async () => {
     try {
-      await fetch(`http://localhost:8000/delete-user/${user}`, { method: 'DELETE' });
+      await fetch(`https://mindnest-backend-591h.onrender.com/delete-user/${user}`, { method: 'DELETE' });
       localStorage.removeItem('token');
       localStorage.removeItem('tokenUser');
       setIsLoggedIn(false);
